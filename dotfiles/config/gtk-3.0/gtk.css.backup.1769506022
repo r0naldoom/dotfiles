@@ -1,0 +1,222 @@
+/* Melissa Dark - GTK3 Color Scheme */
+
+@define-color theme_bg_color #352718;
+@define-color theme_fg_color #e8e4b1;
+@define-color theme_base_color #352718;
+@define-color theme_text_color #e8e4b1;
+@define-color theme_selected_bg_color #e4b53f;
+@define-color theme_selected_fg_color #352718;
+@define-color theme_tooltip_bg_color #483426;
+@define-color theme_tooltip_fg_color #e8e4b1;
+
+@define-color warning_color #ffa21f;
+@define-color error_color #ff7f7f;
+@define-color success_color #6fd560;
+@define-color link_color #6fcad0;
+@define-color link_visited_color #c6a2fe;
+
+@define-color borders #6f5f58;
+@define-color insensitive_fg_color #90918a;
+@define-color insensitive_bg_color #3d2d1f;
+
+/* Window */
+window, .background {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+/* Header bar */
+headerbar, .titlebar {
+    background-color: #483426;
+    color: @theme_fg_color;
+    border-bottom: 1px solid @borders;
+}
+
+headerbar:backdrop {
+    background-color: #3d2d1f;
+}
+
+/* Buttons */
+button {
+    background-image: linear-gradient(to bottom, #524035, #483426);
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-image: linear-gradient(to bottom, #59463f, #524035);
+}
+
+button:active, button:checked {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+button.suggested-action {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+button.destructive-action {
+    background-color: @error_color;
+    color: @theme_selected_fg_color;
+}
+
+/* Entry / Input fields */
+entry, textview, .view {
+    background-color: #2a1c10;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+}
+
+entry:focus, textview:focus {
+    border-color: @theme_selected_bg_color;
+}
+
+/* Selection */
+*:selected, selection {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/* Lists and trees */
+list, listview, treeview {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+}
+
+row:hover, treeview:hover {
+    background-color: #59463f;
+}
+
+row:selected, treeview:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/* Scrollbar */
+scrollbar {
+    background-color: @theme_bg_color;
+}
+
+scrollbar slider {
+    background-color: #6f5f58;
+    border-radius: 4px;
+    min-width: 8px;
+    min-height: 8px;
+}
+
+scrollbar slider:hover {
+    background-color: #90918a;
+}
+
+/* Menu */
+menu, .menu, .popup {
+    background-color: #483426;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+}
+
+menuitem:hover {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/* Tooltip */
+tooltip, .tooltip {
+    background-color: @theme_tooltip_bg_color;
+    color: @theme_tooltip_fg_color;
+    border: 1px solid @borders;
+    border-radius: 4px;
+}
+
+/* Links */
+*:link, link {
+    color: @link_color;
+}
+
+*:visited, link:visited {
+    color: @link_visited_color;
+}
+
+/* Notebook / Tabs */
+notebook {
+    background-color: @theme_bg_color;
+}
+
+notebook tab {
+    background-color: #3d2d1f;
+    color: @theme_fg_color;
+    padding: 4px 12px;
+}
+
+notebook tab:checked {
+    background-color: @theme_bg_color;
+    border-bottom: 2px solid @theme_selected_bg_color;
+}
+
+/* Switch */
+switch {
+    background-color: #3d2d1f;
+    border: 1px solid @borders;
+    border-radius: 12px;
+}
+
+switch:checked {
+    background-color: @theme_selected_bg_color;
+}
+
+switch slider {
+    background-color: @theme_fg_color;
+    border-radius: 50%;
+}
+
+/* Progress bar */
+progressbar trough {
+    background-color: #3d2d1f;
+    border-radius: 4px;
+}
+
+progressbar progress {
+    background-color: @theme_selected_bg_color;
+    border-radius: 4px;
+}
+
+/* Check and radio buttons */
+check, radio {
+    background-color: #2a1c10;
+    border: 1px solid @borders;
+}
+
+check:checked, radio:checked {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #2a1c10;
+}
+
+.sidebar row:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/* Info bars */
+infobar.info {
+    background-color: #6fcad0;
+    color: @theme_selected_fg_color;
+}
+
+infobar.warning {
+    background-color: @warning_color;
+    color: @theme_selected_fg_color;
+}
+
+infobar.error {
+    background-color: @error_color;
+    color: @theme_selected_fg_color;
+}

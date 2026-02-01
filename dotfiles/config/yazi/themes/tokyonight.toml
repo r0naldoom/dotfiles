@@ -1,0 +1,62 @@
+# tokyonight theme for Yazi
+# Seguindo padrão do tmux: azul -> purple
+
+# === Base colors ===
+# bg: #1a1b26 | fg: #c0caf5 | blue: #7aa2f7 | purple: #bb9af7
+# azul escuro: #3d59a1 | bg_highlight: #292e42
+
+cwd = { fg = "#565f89", italic = true }
+
+# Hovered
+hovered         = { bg = "#292e42" }
+preview_hovered = { bg = "#292e42" }
+
+# Find
+find_keyword  = { fg = "#1a1b26", bg = "#e0af68", bold = true }
+find_position = { fg = "#7aa2f7", bg = "#292e42", bold = true }
+
+# Marker
+marker_copied   = { fg = "#9ece6a", bg = "#9ece6a" }
+marker_cut      = { fg = "#f7768e", bg = "#f7768e" }
+marker_marked   = { fg = "#bb9af7", bg = "#bb9af7" }
+marker_selected = { fg = "#7aa2f7", bg = "#7aa2f7" }
+
+# Tabs - cores se completam (ativa purple, inativa azul com fg purple)
+[tabs]
+active   = { fg = "#1a1b26", bg = "#bb9af7", bold = true }
+inactive = { fg = "#bb9af7", bg = "#3d59a1" }
+sep_inner  = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+# Count
+count_copied   = { fg = "#1a1b26", bg = "#9ece6a" }
+count_cut      = { fg = "#1a1b26", bg = "#f7768e" }
+count_selected = { fg = "#1a1b26", bg = "#7aa2f7" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#3b4261" }
+
+[mode]
+normal_main = { fg = "#1a1b26", bg = "#7aa2f7", bold = true }
+normal_alt  = { fg = "#c0caf5", bg = "#292e42" }
+
+select_main = { fg = "#1a1b26", bg = "#bb9af7", bold = true }
+select_alt  = { fg = "#c0caf5", bg = "#292e42" }
+
+unset_main  = { fg = "#1a1b26", bg = "#f7768e", bold = true }
+unset_alt   = { fg = "#c0caf5", bg = "#292e42" }
+
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+[which]
+mask       = { bg = "#1a1b26" }
+cand       = { fg = "#7dcfff" }
+rest       = { fg = "#565f89" }
+desc       = { fg = "#bb9af7" }
+separator  = "  "
+
+[input]
+border = { fg = "#3d59a1" }

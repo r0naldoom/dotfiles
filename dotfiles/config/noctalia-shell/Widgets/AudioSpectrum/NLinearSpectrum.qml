@@ -1,0 +1,51 @@
+import QtQuick
+import qs.Commons
+
+Item {
+  id: root
+  property color fillColor: Color.mPrimary
+  property color strokeColor: Color.mOnSurface
+  property int strokeWidth: 0
+  property var values: []
+  property bool vertical: false
+  property string barPosition: "top" // "top", "bottom", "left", "right"
+
+  // Minimum signal properties
+  property bool showMinimumSignal: false
+  property real minimumSignalValue: 0.05 // Default to 5% of height
+
+  // Pre compute horizontal mirroring
+  readonly property int valuesCount: (values && Array.isArray(values)) ? values.length : 0
+  readonly property int totalBars: valuesCount * 2
+  readonly property real barSlotSize: totalBars > 0 ? (vertical ? height : width) / totalBars : 0
+  readonly property bool highQuality: (Settings.data.audio.visualizerType === "low") ? false : true
+
+  Repeater {
+    model: root.totalBars
+
+    Rectangle {
+      // The first half of bars are a mirror image (reversed values array).
+      // The second half of bars are in normal order.
+      property int valueIndex: index < root.valuesCount ? root.valuesCount - 1 - index // Mirrored half
+                                                        : index - root.valuesCount // Normal half
+
+      property real rawAmp: (root.values && root.values[valueIndex] !== undefined) ? root.values[valueIndex] : 0
+      property real amp: (root.showMinimumSignal && rawAmp === 0) ? root.minimumSignalValue : rawAmp
+
+      color: root.fillColor
+      border.color: root.strokeColor
+      border.width: root.strokeWidth
+      antialiasing: root.highQuality
+      smooth: root.highQuality
+
+      // Only update when value actually changes - reduces GPU load
+      width: vertical ? root.width * amp : root.barSlotSize * 0.5
+      height: vertical ? root.barSlotSize * 0.5 : root.height * amp
+      x: vertical ? (root.barPosition === "left" ? 0 : root.width - width) : index * root.barSlotSize + (root.barSlotSize * 0.25)
+      y: vertical ? index * root.barSlotSize + (root.barSlotSize * 0.25) : root.height - height
+
+      // Disable updates when invisible to save GPU
+      visible: root.visible
+    }
+  }
+}

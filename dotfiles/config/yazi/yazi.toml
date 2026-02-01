@@ -1,0 +1,51 @@
+[mgr]
+ratio = [1, 4, 3]
+sort_by = "alphabetical"
+sort_sensitive = false
+sort_reverse = false
+sort_dir_first = true
+sort_translit = false
+show_hidden = false
+show_symlink = true
+linemode = "size"
+scrolloff = 5
+title_format = "Yazi: {cwd}"
+
+[preview]
+tab_size = 2
+max_width = 600
+max_height = 900
+image_quality = 75
+sixel_fraction = 15
+ueberzug_scale = 1
+ueberzug_offset = [0, 0, 0, 0]
+
+[input]
+cursor_blink = true
+
+[confirm]
+trash_title = "Move {n} file(s) to trash?"
+delete_title = "Permanently delete {n} file(s)?"
+overwrite_title = "Overwrite file?"
+
+[select]
+open_title = "Open with:"
+
+[opener]
+edit = [
+    { run = 'nvim "$@"', desc = "Neovim", block = true, for = "unix" },
+]
+open = [
+    { run = 'xdg-open "$1"', desc = "Open", for = "linux" },
+]
+
+[open]
+rules = [
+    { name = "*.{py,js,ts,html,css,md,txt,conf,toml,yaml,yml,json}", use = ["edit"] },
+    { mime = "text/*", use = ["edit"] },
+    { mime = "image/*", use = ["open"] },
+    { mime = "*", use = ["open"] },
+]
+
+[log]
+enabled = false

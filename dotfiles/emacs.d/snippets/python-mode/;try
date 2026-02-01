@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: try/except
+# key: ;try
+# --
+try:
+    ${1:pass}
+except ${2:Exception} as e:
+    ${3:raise}$0

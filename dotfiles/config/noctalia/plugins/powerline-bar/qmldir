@@ -1,0 +1,4 @@
+module powerline-bar
+Main 1.0 Main.qml
+PowerlineWidget 1.0 PowerlineWidget.qml
+PowerlineSep 1.0 PowerlineSep.qml

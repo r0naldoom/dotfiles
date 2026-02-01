@@ -1,0 +1,32 @@
+{
+  "id": "powerline-bar",
+  "name": "Powerline Suite",
+  "version": "2.1.0",
+  "author": "r0naldoom",
+  "description": "Estilo powerline para widgets e barra (estilo Qtile)",
+  "license": "MIT",
+  "minNoctaliaVersion": "4.0.0",
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "PowerlineWidget.qml",
+    "panel": "PowerlineControlCenter.qml",
+    "settings": "Settings.qml"
+  },
+  "metadata": {
+    "defaultSettings": {
+      "powerlineWidgets": true,
+      "showLogo": true,
+      "showLayout": true,
+      "showWorkspaces": true,
+      "showClock": true,
+      "powerlineSize": 15,
+      "quickApps": [
+        {"icon": "folder", "command": "ghostty -e yazi", "tooltip": "Files"},
+        {"icon": "terminal", "command": "ghostty", "tooltip": "Terminal"},
+        {"icon": "brand-emacs", "command": "emacs", "tooltip": "Emacs"},
+        {"icon": "world", "command": "firefox", "tooltip": "Browser"},
+        {"icon": "brand-spotify", "command": "spotify", "tooltip": "Spotify"}
+      ]
+    }
+  }
+}

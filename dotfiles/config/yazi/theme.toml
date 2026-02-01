@@ -1,0 +1,63 @@
+# gruvbox-material theme for Yazi
+# Baseado no backup de 2025.1 - mesmas cores do tmux
+
+# === Base colors ===
+# bg0: #282828 | fg: #e2cca9 | bg2: #3c3836 | bg4: #45403d | bg5: #5a524c
+# grey0: #7c6f64 | blue: #80aa9e | green: #b0b846 | yellow: #e9b143
+# red: #f2594b | purple: #d3869b | aqua: #8bba7f | orange: #f28534
+
+cwd = { fg = "#7c6f64", italic = true }
+
+# Hovered
+hovered         = { bg = "#3c3836" }
+preview_hovered = { bg = "#3c3836" }
+
+# Find
+find_keyword  = { fg = "#282828", bg = "#e9b143", bold = true }
+find_position = { fg = "#80aa9e", bg = "#3c3836", bold = true }
+
+# Marker
+marker_copied   = { fg = "#b0b846", bg = "#b0b846" }
+marker_cut      = { fg = "#f2594b", bg = "#f2594b" }
+marker_marked   = { fg = "#d3869b", bg = "#d3869b" }
+marker_selected = { fg = "#80aa9e", bg = "#80aa9e" }
+
+# Tabs - ativa claro, inativa sutil (como tmux)
+[tabs]
+active   = { fg = "#282828", bg = "#e2cca9", bold = true }
+inactive = { fg = "#7c6f64", bg = "#45403d" }
+sep_inner  = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+# Count
+count_copied   = { fg = "#282828", bg = "#b0b846" }
+count_cut      = { fg = "#282828", bg = "#f2594b" }
+count_selected = { fg = "#282828", bg = "#80aa9e" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#5a524c" }
+
+[mode]
+normal_main = { fg = "#282828", bg = "#80aa9e", bold = true }
+normal_alt  = { fg = "#e2cca9", bg = "#3c3836" }
+
+select_main = { fg = "#282828", bg = "#e9b143", bold = true }
+select_alt  = { fg = "#e2cca9", bg = "#3c3836" }
+
+unset_main  = { fg = "#282828", bg = "#f2594b", bold = true }
+unset_alt   = { fg = "#e2cca9", bg = "#3c3836" }
+
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+[which]
+mask       = { bg = "#282828" }
+cand       = { fg = "#8bba7f" }
+rest       = { fg = "#7c6f64" }
+desc       = { fg = "#d3869b" }
+separator  = "  "
+
+[input]
+border = { fg = "#5a524c" }

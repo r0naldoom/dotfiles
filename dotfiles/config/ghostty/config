@@ -1,0 +1,24 @@
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 12
+
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+adjust-underline-position = 2
+adjust-cell-height = -1
+
+
+background-opacity = 0.7
+clipboard-read = allow
+clipboard-write = allow
+clipboard-trim-trailing-spaces = true
+copy-on-select = true
+cursor-style = block
+cursor-style-blink = false
+window-decoration = none
+window-padding-x = 10
+window-padding-y = 10
+shell-integration = fish
+
+clipboard-paste-protection = false
+theme = Gruvbox Material Dark

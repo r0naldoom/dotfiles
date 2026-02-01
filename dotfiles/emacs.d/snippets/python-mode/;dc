@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: dict comprehension
+# key: ;dc
+# --
+{${1:k}: ${2:v} for ${3:k, v} in ${4:items}}$0

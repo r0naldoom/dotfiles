@@ -1,0 +1,35 @@
+{
+  "powerlineWidgets": true,
+  "showLogo": true,
+  "showLayout": true,
+  "showWorkspaces": true,
+  "showClock": true,
+  "powerlineSize": 15,
+  "quickApps": [
+    {
+      "icon": "folder",
+      "command": "ghostty -e yazi",
+      "tooltip": "Files"
+    },
+    {
+      "icon": "terminal",
+      "command": "ghostty",
+      "tooltip": "Terminal"
+    },
+    {
+      "icon": "brand-emacs",
+      "command": "emacs",
+      "tooltip": "Emacs"
+    },
+    {
+      "icon": "world",
+      "command": "firefox",
+      "tooltip": "Browser"
+    },
+    {
+      "icon": "brand-spotify",
+      "command": "spotify",
+      "tooltip": "Spotify"
+    }
+  ]
+}

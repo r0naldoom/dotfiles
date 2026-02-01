@@ -1,0 +1,61 @@
+# ef-cherie theme for Yazi
+# Seguindo padrão do tmux: rosa/magenta
+
+# === Base colors ===
+# bg: #190a0f | fg: #d3cfcf | rosa: #d07080 | magenta: #771a4f
+# escuro: #3a1520 | bg_highlight: #2a1c21
+
+cwd = { fg = "#958384", italic = true }
+
+# Hovered
+hovered         = { bg = "#35272c" }
+preview_hovered = { bg = "#35272c" }
+
+# Find
+find_keyword  = { fg = "#190a0f", bg = "#d4a030", bold = true }
+find_position = { fg = "#57a0d0", bg = "#2a1c21", bold = true }
+
+# Marker
+marker_copied   = { fg = "#60af88", bg = "#60af88" }
+marker_cut      = { fg = "#ef656a", bg = "#ef656a" }
+marker_marked   = { fg = "#d0a0d0", bg = "#d0a0d0" }
+marker_selected = { fg = "#57a0d0", bg = "#57a0d0" }
+
+# Tabs - cores se completam (ativa rosa, inativa magenta com fg rosa)
+[tabs]
+active   = { fg = "#190a0f", bg = "#d07080", bold = true }
+inactive = { fg = "#d07080", bg = "#5a2a35" }
+sep_inner  = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+# Count
+count_copied   = { fg = "#190a0f", bg = "#60af88" }
+count_cut      = { fg = "#190a0f", bg = "#ef656a" }
+count_selected = { fg = "#190a0f", bg = "#57a0d0" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#6a5859" }
+
+[mode]
+normal_main = { fg = "#190a0f", bg = "#d07080", bold = true }
+normal_alt  = { fg = "#d3cfcf", bg = "#392a2f" }
+
+select_main = { fg = "#190a0f", bg = "#d0a0d0", bold = true }
+select_alt  = { fg = "#d3cfcf", bg = "#392a2f" }
+
+unset_main  = { fg = "#190a0f", bg = "#ef656a", bold = true }
+unset_alt   = { fg = "#d3cfcf", bg = "#392a2f" }
+
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+[which]
+mask       = { bg = "#190a0f" }
+cand       = { fg = "#57a0d0" }
+rest       = { fg = "#958384" }
+desc       = { fg = "#d0a0d0" }
+separator  = "  "
+
+[input]
+border = { fg = "#771a4f" }

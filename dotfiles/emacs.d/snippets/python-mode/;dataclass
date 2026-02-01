@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: dataclass
+# key: ;dataclass
+# --
+from dataclasses import dataclass
+
+
+@dataclass
+class ${1:Name}:
+    ${2:field}: ${3:str}$0

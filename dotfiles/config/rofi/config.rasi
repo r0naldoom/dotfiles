@@ -1,0 +1,74 @@
+/* Tokyo Night */
+* {
+    bg: #1a1b26;
+    bg-alt: #16161e;
+    fg: #c0caf5;
+    accent: #bb9af7;
+    urgent: #f7768e;
+
+    background-color: transparent;
+    text-color: @fg;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+window {
+    width: 600px;
+    background-color: @bg;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+mainbox {
+    spacing: 12px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius: 8px;
+    padding: 12px;
+    spacing: 8px;
+}
+
+prompt {
+    text-color: @accent;
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: #565f89;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    scrollbar: false;
+    fixed-height: true;
+    spacing: 4px;
+}
+
+element {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+element-icon {
+    size: 24px;
+    margin: 0 8px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+message {
+    background-color: @bg-alt;
+    border-radius: 8px;
+    padding: 12px;
+}

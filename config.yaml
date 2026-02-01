@@ -1,0 +1,93 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+dotfiles:
+  # ===========================
+  # Shells
+  # ===========================
+  f_fish_config:
+    src: config/fish/config.fish
+    dst: ~/.config/fish/config.fish
+  d_qt5ct:
+    src: config/qt5ct
+    dst: ~/.config/qt5ct
+  d_qt6ct:
+    src: config/qt6ct
+    dst: ~/.config/qt6ct
+  d_gtk3:
+    src: config/gtk-3.0
+    dst: ~/.config/gtk-3.0
+  d_gtk4:
+    src: config/gtk-4.0
+    dst: ~/.config/gtk-4.0
+  d_ghostty:
+    src: config/ghostty
+    dst: ~/.config/ghostty
+  d_hypr:
+    src: config/hypr
+    dst: ~/.config/hypr
+  d_noctalia_shell:
+    src: config/noctalia-shell
+    dst: ~/.config/quickshell/noctalia-shell
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
+    upignore:
+    - lazy-lock.json
+    instignore:
+    - lazy-lock.json
+
+  # ===========================
+  # Rofi
+  # ===========================
+  d_rofi:
+    src: config/rofi
+    dst: ~/.config/rofi
+  d_tmux:
+    src: config/tmux
+    dst: ~/.config/tmux
+  d_yazi:
+    src: config/yazi
+    dst: ~/.config/yazi
+  d_noctalia_plugins:
+    src: config/noctalia/plugins
+    dst: ~/.config/noctalia/plugins
+  f_noctalia_theme_sync:
+    src: local/bin/noctalia-theme-sync
+    dst: ~/.local/bin/noctalia-theme-sync
+    chmod: '755'
+  f_hyprland_session_target:
+    src: config/systemd/user/hyprland-session.target
+    dst: ~/.config/systemd/user/hyprland-session.target
+  f_config.yaml:
+    src: config/bookokrat/config.yaml
+    dst: ~/.config/bookokrat/config.yaml
+  f_bookokrat_settings.yaml:
+    src: bookokrat_settings.yaml
+    dst: ~/.bookokrat_settings.yaml
+profiles:
+  r0naldoom:
+    dotfiles:
+    - f_fish_config
+    - d_qt5ct
+    - d_qt6ct
+    - d_gtk3
+    - d_gtk4
+    - d_ghostty
+    - d_hypr
+    - d_noctalia_shell
+    - d_nvim
+    - d_rofi
+    - d_tmux
+    - d_yazi
+    - d_noctalia_plugins
+    - f_noctalia_theme_sync
+    - f_hyprland_session_target
+    - f_config.yaml
+    - f_bookokrat_settings.yaml

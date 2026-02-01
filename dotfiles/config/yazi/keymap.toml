@@ -1,0 +1,37 @@
+[mgr]
+prepend_keymap = [
+    # === Navigation ===
+    { on = "l", run = "plugin smart-enter", desc = "Enter directory or open file" },
+    { on = "<Enter>", run = "plugin smart-enter", desc = "Enter directory or open file" },
+
+    # === File Operations ===
+    { on = "a", run = "create", desc = "Create file/directory" },
+    { on = "A", run = "create --dir", desc = "Create directory" },
+    { on = "R", run = "bulk_rename", desc = "Bulk rename selected files" },
+
+    # === Extract archives ===
+    { on = ["z", "x"], run = "shell 'bsdtar -xvf \"$1\"' --confirm", desc = "Extract archive here" },
+    { on = ["z", "X"], run = "shell 'mkdir -p \"${1%.*}\" && bsdtar -xvf \"$1\" -C \"${1%.*}\"' --confirm", desc = "Extract to subfolder" },
+
+    # === Shell ===
+    { on = "!", run = "shell --block --confirm", desc = "Run shell command (block)" },
+    { on = "@", run = "shell --interactive", desc = "Run shell command (interactive)" },
+    { on = "$", run = "shell \"$SHELL\" --block --confirm", desc = "Open shell here" },
+
+    # === Toggle options ===
+    { on = [".", "h"], run = "hidden toggle", desc = "Toggle hidden files" },
+    { on = [".", "s"], run = "linemode size", desc = "Show file size" },
+    { on = [".", "m"], run = "linemode mtime", desc = "Show modified time" },
+    { on = [".", "p"], run = "linemode permissions", desc = "Show permissions" },
+    { on = [".", "n"], run = "linemode none", desc = "Hide linemode" },
+
+    # === Plugins - prefix z ===
+    { on = ["z", "z"], run = "plugin archive --args=zip", desc = "Compress to ZIP" },
+    { on = ["z", "t"], run = "plugin archive --args=tar.gz", desc = "Compress to TAR.GZ" },
+    { on = ["z", "j"], run = "plugin easyjump", desc = "Easy jump to files" },
+    { on = ["z", "b"], run = "plugin bypass", desc = "Bypass single directories" },
+    { on = ["z", "c"], run = "plugin chmod", desc = "Chmod on selected files" },
+    { on = ["z", "g"], run = "plugin git", desc = "Show Git file changes" },
+    { on = ["z", "h"], run = "plugin bunny", desc = "Bunny bookmarks" },
+    { on = ["z", "m"], run = "plugin mount", desc = "Mount manager" },
+]

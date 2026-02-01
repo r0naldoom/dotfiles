@@ -1,0 +1,16 @@
+-- ef-melissa-dark colorscheme with transparency
+return {
+  "oonamo/ef-themes.nvim",
+  lazy = false,
+  priority = 1000,
+
+  config = function()
+    local highlights = require("util.highlights")
+
+    -- Aplica o tema
+    vim.cmd.colorscheme("ef-melissa-dark")
+
+    -- Aplica highlights customizados
+    highlights.apply(highlights.ef_melissa_dark())
+  end,
+}

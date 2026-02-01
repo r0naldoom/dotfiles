@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "section": {
+      "widgets": "Widget Style",
+      "bar": "Bar Components",
+      "quickapps": "Quick Apps"
+    },
+    "powerlineWidgets": {
+      "label": "Powerline Widgets",
+      "desc": "Enable powerline triangles on all widgets"
+    },
+    "powerlineSize": {
+      "label": "Separator Size",
+      "desc": "Size of powerline triangles in pixels"
+    },
+    "showLogo": {
+      "label": "Show Logo",
+      "desc": "Display distribution logo in the bar"
+    },
+    "showLayout": {
+      "label": "Show Layout",
+      "desc": "Display window layout indicator"
+    },
+    "showWorkspaces": {
+      "label": "Show Workspaces",
+      "desc": "Display workspace indicators"
+    },
+    "showClock": {
+      "label": "Show Clock",
+      "desc": "Display date and time"
+    },
+    "quickapps": {
+      "desc": "Applications in the Control Center quick access row"
+    }
+  }
+}

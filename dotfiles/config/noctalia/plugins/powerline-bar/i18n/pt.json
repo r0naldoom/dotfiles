@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "section": {
+      "widgets": "Estilo dos Widgets",
+      "bar": "Componentes da Barra",
+      "quickapps": "Apps Rápidos"
+    },
+    "powerlineWidgets": {
+      "label": "Powerline nos Widgets",
+      "desc": "Ativar triângulos powerline em todos os widgets"
+    },
+    "powerlineSize": {
+      "label": "Tamanho do Separador",
+      "desc": "Tamanho dos triângulos powerline em pixels"
+    },
+    "showLogo": {
+      "label": "Mostrar Logo",
+      "desc": "Exibir logo da distribuição na barra"
+    },
+    "showLayout": {
+      "label": "Mostrar Layout",
+      "desc": "Exibir indicador de layout de janelas"
+    },
+    "showWorkspaces": {
+      "label": "Mostrar Workspaces",
+      "desc": "Exibir indicadores de workspace"
+    },
+    "showClock": {
+      "label": "Mostrar Relógio",
+      "desc": "Exibir data e hora"
+    },
+    "quickapps": {
+      "desc": "Aplicativos na linha de acesso rápido do Control Center"
+    }
+  }
+}
