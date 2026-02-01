@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: with statement
-# key: ;with
-# --
-with ${1:open("file")} as ${2:f}:
-    ${3:pass}$0

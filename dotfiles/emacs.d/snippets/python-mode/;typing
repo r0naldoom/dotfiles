@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: typing imports
-# key: ;typing
-# --
-from typing import ${1:Optional, List, Dict}$0

@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: fastapi endpoint
-# key: ;fastapi
-# --
-@app.${1:get}("${2:/}")
-async def ${3:handler}(${4:}):
-    ${5:pass}$0

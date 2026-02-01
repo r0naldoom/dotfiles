@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: pytest fixture
-# key: ;fixture
-# --
-@pytest.fixture
-def ${1:name}():
-    ${2:pass}$0

@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: def function
-# key: ;def
-# --
-def ${1:name}(${2:args})${3: -> None}:
-    ${4:pass}$0
